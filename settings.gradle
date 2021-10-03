@@ -1,1 +1,3 @@
 rootProject.name = 'spring-reactive'
+
+include('hacking-reactive')
