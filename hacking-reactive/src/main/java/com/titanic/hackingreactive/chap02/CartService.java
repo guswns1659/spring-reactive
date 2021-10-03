@@ -12,8 +12,8 @@ public class CartService {
     private final CartRepository cartRepository;
 
     public Mono<Cart> addToCart(String cartId, String id) {
-        return cartRepository.findById("My Cart")
-            .defaultIfEmpty(new Cart("My Cart"))
+        return cartRepository.findById(cartId)
+            .defaultIfEmpty(new Cart(cartId))
             .flatMap(cart -> cart.getCartItems().stream()
                 .filter(cartItem -> cartItem.getItem().getId().equals(id))
                 .findAny()
