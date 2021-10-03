@@ -1,4 +1,4 @@
-package com.titanic.springreactive.hackingtutorial;
+package com.titanic.hackingreactive.chap01;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

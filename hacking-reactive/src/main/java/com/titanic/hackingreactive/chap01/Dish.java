@@ -1,4 +1,4 @@
-package com.titanic.springreactive.hackingtutorial;
+package com.titanic.hackingreactive.chap01;
 
 public class Dish {
 
