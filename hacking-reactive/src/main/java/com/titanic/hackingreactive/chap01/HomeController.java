@@ -1,9 +1,8 @@
 package com.titanic.hackingreactive.chap01;
 
 import com.titanic.hackingreactive.chap02.Cart;
-import com.titanic.hackingreactive.chap02.CartItem;
 import com.titanic.hackingreactive.chap02.CartRepository;
-import com.titanic.hackingreactive.chap02.CartService;
+import com.titanic.hackingreactive.chap02.InventoryService;
 import com.titanic.hackingreactive.chap02.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -19,7 +18,7 @@ public class HomeController {
 
     private final CartRepository cartRepository;
     private final ItemRepository itemRepository;
-    private final CartService cartService;
+    private final InventoryService inventoryService;
 
     @GetMapping
     Mono<Rendering> home() {
@@ -31,7 +30,7 @@ public class HomeController {
 
     @PostMapping("/add/{id}")
     Mono<String> addToCart(@PathVariable String id) {
-        return cartService.addToCart("My Cart", id)
+        return inventoryService.addToCart("My Cart", id)
             .thenReturn("redirect:/");
     }
 }
