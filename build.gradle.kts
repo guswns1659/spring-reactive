@@ -39,6 +39,10 @@ configure(subprojects.filter { it.name !in listOf { "shard" } }) {
         implementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
         implementation("org.mongodb:mongodb-driver-sync") // tranditional mongo DB driver
 
+        // lombok
+        implementation("org.projectlombok:lombok")
+        annotationProcessor("org.projectlombok:lombok")
+
         compileOnly("org.springframework.boot:spring-boot-devtools")
         testImplementation("org.springframework.boot:spring-boot-starter-test")
         testImplementation("io.projectreactor:reactor-test")
