@@ -34,6 +34,11 @@ configure(subprojects.filter { it.name !in listOf { "shard" } }) {
     dependencies {
         implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
         implementation("org.springframework.boot:spring-boot-starter-webflux")
+        // mongo db
+        implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive") // mongodb-driver-reactivestreams
+        implementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
+        implementation("org.mongodb:mongodb-driver-sync") // tranditional mongo DB driver
+
         compileOnly("org.springframework.boot:spring-boot-devtools")
         testImplementation("org.springframework.boot:spring-boot-starter-test")
         testImplementation("io.projectreactor:reactor-test")
@@ -46,7 +51,7 @@ configure(subprojects.filter { it.name !in listOf { "shard" } }) {
     }
 }
 
-configure(subprojects.filter { it.parent?.name in listOf{"shard"} }) {
+configure(subprojects.filter { it.parent?.name in listOf { "shard" } }) {
     tasks.bootJar {
         enabled = false
     }
