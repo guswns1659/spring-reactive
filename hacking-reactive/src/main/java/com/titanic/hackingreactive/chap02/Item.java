@@ -7,8 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Item {
 

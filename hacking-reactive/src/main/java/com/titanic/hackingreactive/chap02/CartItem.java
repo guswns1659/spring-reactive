@@ -1,10 +1,11 @@
 package com.titanic.hackingreactive.chap02;
 
 import lombok.AccessLevel;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Getter
+@Data
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class CartItem {
 

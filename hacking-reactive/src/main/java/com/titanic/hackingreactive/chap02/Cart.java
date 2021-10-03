@@ -3,11 +3,13 @@ package com.titanic.hackingreactive.chap02;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.AccessLevel;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.springframework.data.annotation.Id;
 
-@Getter
+@Data
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Cart {
 
