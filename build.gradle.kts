@@ -43,6 +43,8 @@ configure(subprojects.filter { it.name !in listOf { "shard" } }) {
         implementation("org.projectlombok:lombok")
         annotationProcessor("org.projectlombok:lombok")
 
+        implementation("io.projectreactor.tools:blockhound:1.0.3.RELEASE")
+
         compileOnly("org.springframework.boot:spring-boot-devtools")
         testImplementation("org.springframework.boot:spring-boot-starter-test")
         testImplementation("io.projectreactor:reactor-test")
