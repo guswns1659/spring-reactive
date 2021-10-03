@@ -3,6 +3,9 @@ spring:
     hiddenmethod:
       filter:
         enabled: true
+  devtools:
+    restart:
+      log-condition-evaluation-delta: true
 
 logging:
   level:
