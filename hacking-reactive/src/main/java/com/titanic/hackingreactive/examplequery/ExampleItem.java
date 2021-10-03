@@ -2,10 +2,12 @@ package com.titanic.hackingreactive.examplequery;
 
 import java.util.Date;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.geo.Point;
 
 @Getter
+@NoArgsConstructor
 public class ExampleItem {
 
     @Id
