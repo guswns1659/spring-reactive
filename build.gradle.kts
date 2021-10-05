@@ -43,11 +43,15 @@ configure(subprojects.filter { it.name !in listOf { "shard" } }) {
         implementation("org.projectlombok:lombok")
         annotationProcessor("org.projectlombok:lombok")
 
+        // blockHound
         implementation("io.projectreactor.tools:blockhound:1.0.3.RELEASE")
+        testImplementation("io.projectreactor.tools:blockhound-junit-platform:1.0.6.RELEASE")
+        testRuntimeOnly("org.junit.platform:junit-platform-launcher") // 테스트 시 사용하려면 이 의존성 필요
 
         compileOnly("org.springframework.boot:spring-boot-devtools")
         testImplementation("org.springframework.boot:spring-boot-starter-test")
         testImplementation("io.projectreactor:reactor-test")
+
     }
 
     tasks {
