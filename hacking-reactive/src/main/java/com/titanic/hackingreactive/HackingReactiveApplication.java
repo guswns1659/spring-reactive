@@ -10,12 +10,10 @@ import reactor.blockhound.BlockHound;
 public class HackingReactiveApplication {
 
     public static void main(String[] args) {
-        // TODO(jack.comeback) : 책과 다르게 blockHound가 동작하지 않는다.
         BlockHound.builder()
             .allowBlockingCallsInside(
                 TemplateEngine.class.getCanonicalName(), "process"
-            );
-//        BlockHound.install();
+            ).install();
 
         SpringApplication.run(HackingReactiveApplication.class, args);
     }
